@@ -54,7 +54,7 @@ Step 4: Transcriptomic analysis
   Step 4.3 Identifying gene associations by the partial least squared regression  (S4_3_PLSregression.m).
 
 
-PI: 
+Contact: 
 
     Qiang Luo, PhD, Visiting Fellow at the Clare Hall, Cambridge
     Associate Principal Investigator
