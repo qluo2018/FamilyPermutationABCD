@@ -22,23 +22,23 @@ SUMMARY （Matlab2018b; MPlus; R3.5.1; PALM:https://fsl.fmrib.ox.ac.uk/fsl/fslwi
 
 Step 1: Cross-lagged Analysis between ADHD symptoms and sleep disturbances.
    
-   Step 1.1: the RI-CLPM analysis of the QLSCD sample; (S1_1_RI-CLPM in QLSCD.inp);
+     Step 1.1: the RI-CLPM analysis of the QLSCD sample; (S1_1_RI-CLPM in QLSCD.inp);
    
-   Step 1.2: the CLPM analysis of the ABCD sample:
+     Step 1.2: the CLPM analysis of the ABCD sample:
      
-     Step 1.2.1: define the multi-level blocks according to the self-reported family relatedness provided by a questionnaire
-      (acspsw02.txt) in the ABCD data release v1, and generate the block permuted sample by calling the PALM function
-      (S1_2_1_EBforCLPM_questionnaire.m);
+          Step 1.2.1: define the multi-level blocks according to the self-reported family relatedness provided by a questionnaire
+          (acspsw02.txt) in the ABCD data release v1, and generate the block permuted sample by calling the PALM function
+          (S1_2_1_EBforCLPM_questionnaire.m);
      
-     Step 1.2.2: define the multi-level blocks by the genetic kinship estimated using the KING software and generate the permuted
-      sample ( S1_2_2_EBforCLPM_genetic.m);
+          Step 1.2.2: define the multi-level blocks by the genetic kinship estimated using the KING software and generate the permuted
+          sample ( S1_2_2_EBforCLPM_genetic.m);
      
-     Step 1.2.3 CLPM by the questionnaire-defined multi-level block permutation  (S1_2_3_CLPM in ABCD_questionnaire.R)
+          Step 1.2.3 CLPM by the questionnaire-defined multi-level block permutation  (S1_2_3_CLPM in ABCD_questionnaire.R)
      
-     Step 1.2.4 CLPM by the genetic-defined multi-level block permutation  (S1_2_4_CLPM in ABCD_gene.R)
+          Step 1.2.4 CLPM by the genetic-defined multi-level block permutation  (S1_2_4_CLPM in ABCD_gene.R)
      
-     Step 1.2.5 meta-analysis of the cross-lagged path coefficients among the data collection sites in ABCD (S1_2_5_Meta-analysis of
-      CLPM in ABCD.R)
+          Step 1.2.5 meta-analysis of the cross-lagged path coefficients among the data collection sites in ABCD (S1_2_5_Meta-analysis 
+          of CLPM in ABCD.R)
 
 Step 2: Whole-brain voxel-wise association analysis between GMV and sleep/ADHD with multi-level block permutation  
 (S2_MRI_analysis_with_block_permutation.m)
@@ -46,12 +46,13 @@ Step 2: Whole-brain voxel-wise association analysis between GMV and sleep/ADHD w
 Step 3: Mediation analysis of GMV-->ADHD-->Sleep; Analysis of ROI; and Exporatory analysis of the whole brain voxels by using the 3M toolboxl (S3_Mediation_overlapping_clusters.m).
 
 Step 4: Transcriptomic analysis
+ 
+    Step 4.1 Preprocessing of the Allen Brain Gene expression ();
   
-  Step 4.1 Preprocessing of the Allen Brain Gene expression ();
+    Step 4.2 Extracting the t-stats of the mediation for each coordinate as an averaged value within a small volume centered at each
+    tissue location ();
   
-  Step 4.2 Extracting the t-stats of the mediation for each coordinate as an averaged value within a small volume centered at each tissue location ();
-  
-  Step 4.3 Identifying gene associations by the partial least squared regression  (S4_3_PLSregression.m).
+    Step 4.3 Identifying gene associations by the partial least squared regression  (S4_3_PLSregression.m).
 
 
 Contact: 
