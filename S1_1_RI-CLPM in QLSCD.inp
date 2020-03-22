@@ -1,0 +1,68 @@
+!%%%%%%%%%%%%%%
+!%% Step 1: behavioural relationship between Sleep and ADHD
+!%%%%%%%%%%%%%% 
+!%% Step 1.1
+!RI-CLPM  between Sleep and ADHD in SQLCD (ADHD total score - sleep)
+
+
+TITLE: Cross-lagged model with random intercepts;
+DATA: FILE IS time6_rawdata.dat;
+VARIABLE: NAMES = sex s2-s6 t2-t6 h2-h6 i2-i6 tr2 ss2;
+USEVARIABLE = s2-s6 t2-t6;
+Missing = all(-999);
+
+
+MODEL:
+!create two random intercepts
+RI_sleep BY s2@1 s3@1 s4@1 s5@1 s6@1;
+RI_adhd BY  t2@1 t3@1 t4@1 t5@1 t6@1;
+
+!CREATE within-person centered variables
+SP2 BY s2@1; 
+SP3 BY s3@1; 
+SP4 BY s4@1; 
+SP5 BY s5@1; 
+SP6 BY s6@1;
+
+!AD1 BY t1@1; 
+AD2 BY t2@1; 
+AD3 BY t3@1; 
+AD4 BY t4@1; 
+AD5 BY t5@1; 
+AD6 BY t6@1;
+
+!constrain the measurement erro variances to zero
+s2-s6@0;
+t2-t6@0;
+
+!Estimate the lagged effects between
+!the within-person centered variables
+SP6 ON SP5 AD5; 
+SP5 ON SP4 AD4; 
+SP4 ON SP3 AD3; 
+SP3 ON SP2 AD2; 
+
+AD6 ON AD5 SP5; 
+AD5 ON AD4 SP4; 
+AD4 ON AD3 SP3; 
+AD3 ON AD2 SP2; 
+
+
+!ESTIMATE the covariance between the within-person
+!centered variables at the first wave
+SP2 with AD2;
+
+!Estimate the covariances between the residuals of
+!the within-person centered variables (the innovations) 
+SP3 with AD3; 
+SP4 with AD4; 
+SP5 WITH AD5; 
+SP6 WITH AD6;
+
+!Fix the correlation between the individual factors and the other
+!exogenous variables to zero (by default these would be estimated)
+RI_sleep WITH SP2@0 AD2@0;
+RI_adhd WITH SP2@0 AD2@0;
+   
+             
+OUTPUT: TECH1 STDYX SAMPSTAT;
