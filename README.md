@@ -19,6 +19,7 @@ the QLSCD data could be used only after approval. Therefore, the QLSCD data in t
 5. If the data and codes are used in your work, please cite the above reference, namely Shen et al. 2020. 
 
 SUMMARY （Matlab2018b; MPlus; R3.5.1; PALM:https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM; KING:http://people.virginia.edu/~wc9c/KING/）
+
 Step 1: Cross-lagged Analysis between ADHD symptoms and sleep disturbances.
    
    Step 1.1: the RI-CLPM analysis of the QLSCD sample; (S1_1_RI-CLPM in QLSCD.inp);
@@ -45,12 +46,17 @@ Step 2: Whole-brain voxel-wise association analysis between GMV and sleep/ADHD w
 Step 3: Mediation analysis of GMV-->ADHD-->Sleep; Analysis of ROI; and Exporatory analysis of the whole brain voxels by using the 3M toolboxl (S3_Mediation_overlapping_clusters.m).
 
 Step 4: Transcriptomic analysis
+  
   Step 4.1 Preprocessing of the Allen Brain Gene expression ();
+  
   Step 4.2 Extracting the t-stats of the mediation for each coordinate as an averaged value within a small volume centered at each tissue location ();
+  
   Step 4.3 Identifying gene associations by the partial least squared regression  (S4_3_PLSregression.m).
 
 
-PI: Qiang Luo, PhD, Visiting Fellow at the Clare Hall, Cambridge
+PI: 
+
+    Qiang Luo, PhD, Visiting Fellow at the Clare Hall, Cambridge
     Associate Principal Investigator
     Institute of Science and Technology for Brain-Inspired Intelligence (ISTBI)
     Fudan University
@@ -59,9 +65,11 @@ PI: Qiang Luo, PhD, Visiting Fellow at the Clare Hall, Cambridge
     https://sites.google.com/site/qluochina/
     http://homepage.fudan.edu.cn/qiangluo/
 
-Team Members:  Chun Shen, MSc,  cshen17@fudan.edu.cn
-               Jingnan Du, BA,  jingnandu3@gmail.com
-               Xingzhong Zhao, BA, 18210850006@fudan.edu.cn
+Team Members:  
+
+    Chun Shen, MSc,  cshen17@fudan.edu.cn
+    Jingnan Du, BA,  jingnandu3@gmail.com
+    Xingzhong Zhao, BA, 18210850006@fudan.edu.cn
 
 The current version was relesed on 22 Mar 2020. 
 
