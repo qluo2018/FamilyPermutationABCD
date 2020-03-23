@@ -47,10 +47,10 @@ Step 3: Mediation analysis of GMV-->ADHD-->Sleep; Analysis of ROI; and Exporator
 
 Step 4: Transcriptomic analysis
  
-    Step 4.1 Preprocessing of the Allen Brain Gene expression ();
+    Step 4.1 Preprocessing of the Allen Brain Gene expression (S4_1_AHBA_datapreprocess.m);
   
     Step 4.2 Extracting the t-stats of the mediation for each coordinate as an averaged value within a small volume centered at each
-    tissue location ();
+    tissue location (S4_2_mediation_t_value_extract.m);
   
     Step 4.3 Identifying gene associations by the partial least squared regression  (S4_3_PLSregression.m).
 
