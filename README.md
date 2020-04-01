@@ -8,7 +8,7 @@ Data and Code of paper:
 
 Shen et al. What is the Link between Attention-Deficit/Hyperactivity Disorder and Sleep Disturbance? 
 A multimodal examination of longitudinal relationships and brain structure using large-scale population-based cohorts. 
-Biological Psychiatry, 2020. Acceptted
+Biological Psychiatry, 2020. https://doi.org/10.1016/j.biopsych.2020.03.010 (in press)
 
 NOTE
 1. Some codes were adapted from others. Clear copyright and reference was stated in the relevant scripts.
@@ -77,6 +77,6 @@ The current version was relesed on 22 Mar 2020.
 Citation of this package:
 Shen et al. What is the Link between Attention-Deficit/Hyperactivity Disorder and Sleep Disturbance? 
 A multimodal examination of longitudinal relationships and brain structure using large-scale population-based cohorts. 
-Biological Psychiatry, 2020. Acceptted
+Biological Psychiatry, 2020. https://doi.org/10.1016/j.biopsych.2020.03.010 (in press)
 
  
